@@ -8,6 +8,12 @@ jobs:
     steps:
       - checkout
       - run:
+        name: Diags
+        command: |
+          pwd
+          ls -la . ..
+          printenv
+      - run:
           name: Ensure backend infrastructure exist
           command: |
             aws cloudformation deploy --template-file template.yml --stack-name my-stack

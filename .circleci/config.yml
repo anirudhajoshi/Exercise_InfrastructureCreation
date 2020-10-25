@@ -8,11 +8,11 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Diags
-        command: |
-          pwd
-          ls -la . ..
-          printenv
+          name: Diags
+          command: |
+            pwd
+            ls -la . ..
+            printenv
       - run:
           name: Ensure backend infrastructure exist
           command: |
